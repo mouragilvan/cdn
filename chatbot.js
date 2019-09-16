@@ -15,7 +15,7 @@ var js = document.createElement('script');
 js.src = 'https://cdn.botframework.com/botframework-webchat/latest/webchat.js';
 $('body').append(js);  
 
-var html_chatbot = '<div id="webchat" class="bottom-right animated" style="opacity: 0;display: none" role="main"></div> <div id="webchatBtn" class="bottom-right" ><img src="" ></img></div>';
+var html_chatbot = '<div id="vertice_webchat" class="bottom-right animated" style="opacity: 0;display: none" role="main"></div> <div id="vertice_webchatBtn" class="bottom-right" ><img src="" ></img></div>';
 $('body').append(html_chatbot);
 
  function animateCSS(element, animationName, callback) {
@@ -32,29 +32,29 @@ $('body').append(html_chatbot);
         node.addEventListener('animationend', handleAnimationEnd)
     }
 
-    if($('#webchat').children().length == 0){
-        $('#webchatBtn').click(function (e) {
-            if($('#webchat').css("opacity") == 1){
-                animateCSS('#webchat', 'fadeOutDown', function() {
-                    $('#webchat').css('opacity', 0);
-                    $('#webchat').css('display', 'none');
-                    $('#webchat').removeClass('fadeOutDown');
+    if($('#vertice_webchat').children().length == 0){
+        $('#vertice_webchatBtn').click(function (e) {
+            if($('#vertice_webchat').css("opacity") == 1){
+                animateCSS('#vertice_webchat', 'fadeOutDown', function() {
+                    $('#vertice_webchat').css('opacity', 0);
+                    $('#vertice_webchat').css('display', 'none');
+                    $('#vertice_webchat').removeClass('fadeOutDown');
                 })
             }else{
-                $('#webchat').css('display', 'block');
-                animateCSS('#webchat', 'fadeInUp', function() {
-                    $('#webchat').css('opacity', 1);
+                $('#vertice_webchat').css('display', 'block');
+                animateCSS('#vertice_webchat', 'fadeInUp', function() {
+                    $('#vertice_webchat').css('opacity', 1);
 
-                    $('#webchat').removeClass('fadeInUp');
+                    $('#vertice_webchat').removeClass('fadeInUp');
                 })
             }
             
         });
     }
 
-    function chatbotInit(token, image)
+    function chatbotInit(token, image, userID, username,locale,botAvatarInitials,userAvatarInitials)
     {
-       $('#webchatBtn > img').attr('src',image);
+       $('#vertice_webchatBtn > img').attr('src',image);
     
       setTimeout(function(){
         WebChat.renderWebChat(
@@ -62,13 +62,13 @@ $('body').append(html_chatbot);
             directLine: WebChat.createDirectLine({
                 token:  token
             }),
-            userID: 'YOUR_USER_ID',
-            username: 'voce',
-             locale: 'pt-BR',
-            botAvatarInitials: 'AC',
-            userAvatarInitials: 'VC'
+            userID: userID,
+            username: username,
+             locale: locale,
+            botAvatarInitials: botAvatarInitials,
+            userAvatarInitials: userAvatarInitials
         },
-        document.getElementById('webchat')
+        document.getElementById('vertice_webchat')
       );
     },3000); 
     
