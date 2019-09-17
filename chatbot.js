@@ -1,8 +1,16 @@
+if (window.jQuery == undefined){
+     js = document.createElement('script');
+     js.src = 'https://code.jquery.com/jquery-3.4.1.js';
+     
+     document.body.appendChild(js);     
+}
 
+setTimeout(function(){
 /*IMPORTS CSS*/
 var style = document.createElement('style');
 style.type = 'text/css';
 style.innerText = '@import "https://cdn.jsdelivr.net/gh/mouragilvan/cdn@master/chatbot.css";';
+
 $('body').append(style);
 
 var style = document.createElement('style');
@@ -13,6 +21,7 @@ $('body').append(style);
 /*IMPORTS JS*/
 var js = document.createElement('script');
 js.src = 'https://cdn.botframework.com/botframework-webchat/latest/webchat.js';
+document.body.appendChild
 $('body').append(js);  
 
 var html_chatbot = '<div id="vertice_webchat" class="bottom-right animated" style="opacity: 0;display: none" role="main"></div> <div id="vertice_webchatBtn" class="bottom-right" ><img src="" ></img></div>';
@@ -51,12 +60,15 @@ $('body').append(html_chatbot);
             
         });
     }
+},2000);
+
+
 
     function chatbotInit(token, image, userID, username,locale,botAvatarInitials,userAvatarInitials)
     {
-       $('#vertice_webchatBtn > img').attr('src',image);
-    
+     
       setTimeout(function(){
+        $('#vertice_webchatBtn > img').attr('src',image);
         WebChat.renderWebChat(
         {
             directLine: WebChat.createDirectLine({
@@ -72,4 +84,4 @@ $('body').append(html_chatbot);
       );
     },3000); 
     
-   } 
+    } 
