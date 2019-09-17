@@ -1,7 +1,6 @@
 if (window.jQuery == undefined){
      js = document.createElement('script');
      js.src = 'https://code.jquery.com/jquery-3.4.1.js';
-     
      document.body.appendChild(js);     
 }
 
@@ -84,6 +83,6 @@ function chatbotInit(token, image, userID, username,locale,botAvatarInitials,use
         },
         document.getElementById('vertice_webchat')
       );
-     },3000); 
+    },3000); 
     
 } 
