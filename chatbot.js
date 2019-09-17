@@ -4,6 +4,7 @@ if (window.jQuery == undefined){
      
      document.body.appendChild(js);     
 }
+
 setTimeout(function(){
 /*IMPORTS CSS*/
 var style = document.createElement('style');
@@ -61,10 +62,7 @@ $('body').append(html_chatbot);
     }
 },2000);
 
-
-
-    function chatbotInit(token, image, userID, username,locale,botAvatarInitials,userAvatarInitials,class_webchat)
-    {
+function chatbotInit(token, image, userID, username,locale,botAvatarInitials,userAvatarInitials,class_webchat){
      
       setTimeout(function(){
         $('#vertice_webchatBtn > img').attr('src',image);
@@ -86,6 +84,6 @@ $('body').append(html_chatbot);
         },
         document.getElementById('vertice_webchat')
       );
-    },3000); 
+     },3000); 
     
-    } 
+} 
