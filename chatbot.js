@@ -24,7 +24,7 @@ js.src = 'https://cdn.botframework.com/botframework-webchat/latest/webchat.js';
 document.body.appendChild
 $('body').append(js);  
 
-var html_chatbot = '<div id="vertice_webchat" class="bottom-right animated" style="opacity: 0;display: none" role="main"></div> <div id="vertice_webchatBtn" class="bottom-right" ><img src="" ></img></div>';
+var html_chatbot = '<div id="vertice_webchat" class="animated" style="opacity: 0;display: none" role="main"></div> <div id="vertice_webchatBtn" class="bottom-right" ><img src="" ></img></div>';
 $('body').append(html_chatbot);
 
  function animateCSS(element, animationName, callback) {
@@ -64,11 +64,16 @@ $('body').append(html_chatbot);
 
 
 
-    function chatbotInit(token, image, userID, username,locale,botAvatarInitials,userAvatarInitials)
+    function chatbotInit(token, image, userID, username,locale,botAvatarInitials,userAvatarInitials,class_webchat)
     {
      
       setTimeout(function(){
         $('#vertice_webchatBtn > img').attr('src',image);
+        if(class_webchat == "" || class_webchat == null){
+            $('#vertice_webchat').addClass('bottom-right');
+        }else{
+            $('#vertice_webchat').addClass(class_webchat);
+        }
         WebChat.renderWebChat(
         {
             directLine: WebChat.createDirectLine({
