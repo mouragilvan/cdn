@@ -4,7 +4,6 @@ if (window.jQuery == undefined){
      
      document.body.appendChild(js);     
 }
-
 setTimeout(function(){
 /*IMPORTS CSS*/
 var style = document.createElement('style');
