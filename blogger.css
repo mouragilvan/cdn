@@ -1,4 +1,6 @@
-
+.centered-top .Header p {
+ font-size: 44px;
+}
 .post-wrapper{
   margin-top: 10px !important;
 }
