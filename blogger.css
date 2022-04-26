@@ -1,23 +1,29 @@
 .centered-top .Header p {
- font-size: 44px;
+  font-size: 44px;
 }
 .post-wrapper{
   margin-top: 10px !important;
 }
 .overflowable-item{
-border-right: 4px solid #f7f7f7;
+  border-right: 4px solid #f7f7f7;
 }
 .contact-form-name, .contact-form-email, .contact-form-email-message{
-width: 247px;
+  width: 247px;
 }
 .contact-form-button{
-width: 247px;
-padding: 9px 0px;
+  width: 247px;
+  padding: 9px 0px;
 }
 .wikipedia-search-input{
-width: 112px;
+  width: 112px;
 }
 #search_top{
-     border: 1px solid gray;
-     overflow: hidden;
+  border: 1px solid gray;
+  overflow: hidden;
 }
+#custom-label2{
+  background: #0077e5ed;
+  color: white;
+  font-weight: bold;
+}
+
