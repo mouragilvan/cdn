@@ -17,13 +17,16 @@
 .wikipedia-search-input{
   width: 112px;
 }
-#search_top{
-  border: 1px solid gray;
-  overflow: hidden;
-}
+
 #custom-label2{
   background: #0077e5ed;
   color: white;
   font-weight: bold;
 }
 
+@media screen and (min-width: 900px) {
+  #search_top{
+  border: 1px solid gray;
+  overflow: hidden;
+  }
+}
