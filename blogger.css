@@ -29,8 +29,5 @@
 }
 
 @media screen and (min-width: 900px) {
-  #search_top{
-  border: 1px solid gray;
-  overflow: hidden;
-  }
+ 
 }
