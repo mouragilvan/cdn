@@ -1,3 +1,6 @@
+.bg-photo-container{
+  display: none;
+}
 .centered-top .Header p {
   font-size: 44px;
 }
